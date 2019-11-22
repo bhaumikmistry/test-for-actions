@@ -9,11 +9,7 @@ ls
 
 echo "Run make and run binary"
 
-gcc --std=c++11 -c file_format_check.cpp -o ffc.o
-g++ -o main ffc.o
-
-ls
-
-./main
+# if error return 1
+sh build_run.sh || exit 1
 
 echo "test shell script run end"

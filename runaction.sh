@@ -1,4 +1,4 @@
-#!/bash/bin
+#!/bin/bash
 
 pwd
 echo "$GITHUB_WORKSPACE"

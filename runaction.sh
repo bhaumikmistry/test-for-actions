@@ -6,7 +6,14 @@ cd "$GITHUB_WORKSPACE" || exit 1
 ls 
 cd Scripts
 ls
-chmod +x make_file.sh
-sh make_file.sh
 
-echo "test shell script run"
+echo "Run make and run binary"
+
+gcc --std=c++11 -c file_format_check.cpp -o ffc.o
+g++ -o main ffc.o
+
+ls
+
+./main
+
+echo "test shell script run end"

@@ -11,6 +11,9 @@ jobs:
       with:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
     - name: Update version.js
         shell: python
         run: |

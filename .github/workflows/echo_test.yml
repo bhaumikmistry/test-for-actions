@@ -10,6 +10,3 @@ jobs:
       with:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
-    - name: Update version.js
-        run: echo this is not fun.
-        shell: bash

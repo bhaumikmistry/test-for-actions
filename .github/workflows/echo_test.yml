@@ -10,6 +10,5 @@ jobs:
       with:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
-    steps:
     - name: LS Files
       run: ls

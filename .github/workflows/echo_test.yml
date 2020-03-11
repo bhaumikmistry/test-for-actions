@@ -6,16 +6,17 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Version In File Updater 
-      uses: bhaumikmistry/Version-update-action@v0.2-alphaE
+      uses: bhaumikmistry/Version-update-action@v0.2.1-alpha
       with:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
-    - name: Update version.js
-        run: |
-          cat version.js
-          git config --global user.name github-actions
-          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git add version.js
-          git commit -am "updating version in version.js" ||  true
-          git push --force origin HEAD:$GITHUB_REF || true    
+    - name: LS Files
+      shell: sh
+      run: |
+        cat version.js
+        git config --global user.name github-actions
+        git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+        git add version.js
+        git commit -am "updating version in version.js" ||  true
+        git push --force origin HEAD:$GITHUB_REF || true    

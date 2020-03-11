@@ -6,10 +6,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Version In File Updater 
-      uses: bhaumikmistry/Version-update-action@v0.2-alpha
+      uses: bhaumikmistry/Version-update-action@v0.2.1-alpha
       with:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
     - name: LS Files
       shell: sh
-      run: ls
+      run: ls .

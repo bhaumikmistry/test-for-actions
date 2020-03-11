@@ -11,6 +11,7 @@ jobs:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
     - name: Update version.js
+        run: echo this is not fun.
         run: |
           cat version.js
           git config --global user.name github-actions

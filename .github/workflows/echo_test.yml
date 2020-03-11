@@ -12,6 +12,7 @@ jobs:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
     - name: Update version.js
+        shell: python
         run: |
           cat version.js
           git config --global user.name github-actions

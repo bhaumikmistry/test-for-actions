@@ -11,4 +11,5 @@ jobs:
         versionFileName: version.js
         versionNumberEncapsulateText: "*"
     - name: LS Files
+      shell: sh
       run: ls
